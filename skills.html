@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills | Selvina Swarna</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      background-color: #0a001a;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(circle at center, rgba(120,0,255,0.25) 0%, transparent 80%),
+                  repeating-linear-gradient(#2e0066 0 2px, transparent 2px 100px),
+                  repeating-linear-gradient(90deg,#2e0066 0 2px, transparent 2px 100px);
+      background-size: 100% 100%, 100px 100px, 100px 100px;
+      z-index: -1;
+      animation: gridmove 20s linear infinite;
+    }
+    @keyframes gridmove {
+      from {background-position: 0 0, 0 0, 0 0;}
+      to {background-position: 0 0, 100px 100px, -100px -100px;}
+    }
+    nav {backdrop-filter: blur(8px); background: rgba(0,0,30,0.5);}
+    .bar {background: rgba(255,255,255,0.1); border-radius: 9999px; overflow: hidden;}
+    .fill {height: 10px; background: linear-gradient(90deg,#7c3aed,#9333ea);}
+    .chip {
+      display: inline-block;
+      padding: 0.5rem 1.2rem;
+      margin: 0.4rem;
+      border-radius: 9999px;
+      background: rgba(150,80,255,0.15);
+      border: 1px solid rgba(200,150,255,0.3);
+      color: #d8b4fe;
+      font-size: 0.9rem;
+      transition: 0.3s;
+    }
+    .chip:hover {box-shadow: 0 0 15px rgba(160,80,255,0.4);}
+    .btn {
+      background: linear-gradient(90deg,#7c3aed,#9333ea);
+      padding: 0.6rem 1.4rem;
+      border-radius: 9999px;
+      color: white;
+      transition: all 0.3s ease;
+    }
+    .btn:hover {transform: scale(1.05); box-shadow: 0 0 25px #8b5cf6;}
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full z-50 py-4 px-8 flex justify-between items-center">
+    <h1 class="text-lg md:text-xl font-semibold text-purple-300 tracking-wide">Selvina Swarna</h1>
+    <div class="space-x-6 text-sm">
+      <a href="index.html" class="hover:text-purple-400">Home</a>
+      <a href="about.html" class="hover:text-purple-400">About</a>
+      <a href="experience.html" class="hover:text-purple-400">Experience</a>
+      <a href="projects.html" class="hover:text-purple-400">Projects</a>
+      <a href="certifications.html" class="hover:text-purple-400">Certifications</a>
+      <a href="contact.html" class="hover:text-purple-400">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Skills Section -->
+  <section class="min-h-screen px-6 pt-32 pb-20">
+    <h2 class="text-4xl font-bold text-purple-300 mb-12 text-center" data-aos="fade-down">Technical & Soft Skills</h2>
+
+    <div class="max-w-6xl mx-auto space-y-12">
+
+      <!-- Programming & Scripting -->
+      <div data-aos="fade-up">
+        <h3 class="text-2xl font-semibold text-purple-200 mb-3">Programming & Scripting</h3>
+        <p class="text-sm text-gray-300 mb-2">Python · R · SQL · PHP · HTML5 · CSS3</p>
+        <div class="bar"><div class="fill" style="width: 95%"></div></div>
+      </div>
+
+      <!-- Data Analytics & Visualization -->
+      <div data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-2xl font-semibold text-purple-200 mb-3">Data Analytics & Visualization</h3>
+        <p class="text-sm text-gray-300 mb-2">Advanced Excel (VLOOKUP, PivotTables, HLOOKUP) · Power BI · Tableau · Google Sheets · Data Cleaning · KPI Analysis · Dashboarding</p>
+        <div class="bar"><div class="fill" style="width: 90%"></div></div>
+      </div>
+
+      <!-- Cybersecurity & Tools -->
+      <div data-aos="fade-up" data-aos-delay="200">
+        <h3 class="text-2xl font-semibold text-purple-200 mb-3">Cybersecurity & Tools</h3>
+        <p class="text-sm text-gray-300 mb-2">Network Security · Ethical Hacking · Vulnerability Scanning · Cryptography · Risk Management · Kali Linux · Nmap · OpenSSL · Qualys · Kaseya · Active Directory · ServiceNow · Auditing (Access Reviews, Policy Compliance)</p>
+        <div class="bar"><div class="fill" style="width: 88%"></div></div>
+      </div>
+
+      <!-- Cloud & Data Platforms -->
+      <div data-aos="fade-up" data-aos-delay="300">
+        <h3 class="text-2xl font-semibold text-purple-200 mb-3">Cloud & Data Platforms</h3>
+        <p class="text-sm text-gray-300 mb-2">Google Cloud Platform (GCP) · Amazon Web Services (AWS) · Microsoft Azure · Snowflake</p>
+        <div class="bar"><div class="fill" style="width: 80%"></div></div>
+      </div>
+
+      <!-- Business & Collaboration Tools -->
+      <div data-aos="fade-up" data-aos-delay="400">
+        <h3 class="text-2xl font-semibold text-purple-200 mb-3">Business & Collaboration Tools</h3>
+        <p class="text-sm text-gray-300 mb-2">PowerPoint · Microsoft Office Suite · Google Workspace · Git · SharePoint</p>
+        <div class="bar"><div class="fill" style="width: 85%"></div></div>
+      </div>
+
+      <!-- Emerging Technologies -->
+      <div data-aos="fade-up" data-aos-delay="500">
+        <h3 class="text-2xl font-semibold text-purple-200 mb-3">Emerging Technologies</h3>
+        <p class="text-sm text-gray-300 mb-2">Basic NLP · Generative AI Awareness · Penetration Testing Fundamentals · Prompt Engineering · Secure Coding Awareness · Threat Management</p>
+        <div class="bar"><div class="fill" style="width: 75%"></div></div>
+      </div>
+
+      <!-- Soft Skills -->
+      <div data-aos="fade-up" data-aos-delay="600">
+        <h3 class="text-2xl font-semibold text-purple-200 mb-5 mt-10 text-center">Soft Skills</h3>
+        <div class="flex flex-wrap justify-center">
+          <span class="chip">Empathetic Communication</span>
+          <span class="chip">Team Collaboration</span>
+          <span class="chip">Critical Thinking</span>
+          <span class="chip">Adaptability</span>
+          <span class="chip">Leadership with Positivity</span>
+          <span class="chip">Problem Solving</span>
+          <span class="chip">Decision Making</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="contact.html" class="btn">Next → Contact</a>
+    </div>
+  </section>
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({duration:1000, once:true});</script>
+</body>
+</html>
