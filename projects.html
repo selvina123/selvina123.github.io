@@ -1,106 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | Selvina Swarna</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     body {
-      background: linear-gradient(135deg, #c81d77, #6a00f4);
-      color: #fff;
+      margin: 0;
       font-family: 'Poppins', sans-serif;
+      color: white;
+      background-color: #0a001a;
+      overflow-x: hidden;
     }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(circle at center, rgba(120,0,255,0.25) 0%, transparent 80%),
+                  repeating-linear-gradient(#2e0066 0 2px, transparent 2px 100px),
+                  repeating-linear-gradient(90deg,#2e0066 0 2px, transparent 2px 100px);
+      background-size: 100% 100%, 100px 100px, 100px 100px;
+      z-index: -1;
+      animation: gridmove 20s linear infinite;
+    }
+    @keyframes gridmove {
+      from {background-position: 0 0, 0 0, 0 0;}
+      to {background-position: 0 0, 100px 100px, -100px -100px;}
+    }
+    nav {backdrop-filter: blur(8px); background: rgba(0,0,30,0.5);}
     .card {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.25);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
       border-radius: 1rem;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 20px rgba(140,80,255,0.15);
       transition: all 0.3s ease;
     }
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    .card:hover {transform: translateY(-5px); box-shadow: 0 0 30px rgba(140,80,255,0.3);}
+    .btn {
+      background: linear-gradient(90deg,#7c3aed,#9333ea);
+      padding: 0.6rem 1.4rem;
+      border-radius: 9999px;
+      color: white;
+      transition: all 0.3s ease;
     }
+    .btn:hover {transform: scale(1.05); box-shadow: 0 0 25px #8b5cf6;}
   </style>
 </head>
-<body class="px-6 py-10">
-  <header class="text-center mb-10">
-    <h1 class="text-4xl font-bold tracking-wide mb-3">Project Portfolio</h1>
-    <p class="text-gray-200">A showcase of my hands-on projects blending cybersecurity, analytics, and full-stack development.</p>
-  </header>
 
-  <main class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+<body>
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full z-50 py-4 px-8 flex justify-between items-center">
+    <h1 class="text-lg md:text-xl font-semibold text-purple-300 tracking-wide">Selvina Swarna</h1>
+    <div class="space-x-6 text-sm">
+      <a href="index.html" class="hover:text-purple-400">Home</a>
+      <a href="about.html" class="hover:text-purple-400">About</a>
+      <a href="experience.html" class="hover:text-purple-400">Experience</a>
+      <a href="certifications.html" class="hover:text-purple-400">Certifications</a>
+      <a href="skills.html" class="hover:text-purple-400">Skills</a>
+      <a href="contact.html" class="hover:text-purple-400">Contact</a>
+    </div>
+  </nav>
 
-    <!-- Energy Consumption Prediction Dashboard -->
-    <div class="card p-6">
-      <h2 class="text-2xl font-semibold mb-2">Energy Consumption Prediction Dashboard – ECS Energy</h2>
-      <p class="text-sm text-gray-300 mb-3">Mar 2025 – May 2025</p>
-      <p>
-        Developed an energy forecasting platform in R integrating multi-source .parquet datasets via Arrow and applying feature engineering & linear regression for predictive modeling.  
-        Deployed a Shiny web app with dynamic UI filters, user inputs, and ggplot2 visual analytics to deliver real-time insights across 5 000 + buildings.
-      </p>
-      <p class="mt-3 text-sm text-pink-200">Skills: R · Data Analysis · Data Visualization · Dashboard Building</p>
+  <!-- Projects Section -->
+  <section class="min-h-screen px-6 pt-32 pb-20">
+    <h2 class="text-4xl font-bold text-purple-300 mb-12 text-center" data-aos="fade-down">Projects Portfolio</h2>
+
+    <div class="max-w-6xl mx-auto space-y-10">
+
+      <!-- CyberPulse Dashboard -->
+      <div class="card p-8" data-aos="fade-up">
+        <h3 class="text-3xl font-semibold text-purple-200 mb-2">✨ CyberPulse Dashboard</h3>
+        <p class="text-gray-300 text-sm mb-4">Jan 2025 – May 2025 | Streamlit + AI/ML + Docker + CI/CD</p>
+        <p class="leading-relaxed text-gray-200">
+          An interactive cybersecurity platform that tracks security events, categorizes risks, visualizes attack patterns, and generates instant insights for suspicious activity.
+          Integrates defensive security, AI/ML, and cloud deployment into one unified risk-analysis system.
+        </p>
+        <ul class="list-disc ml-6 mt-3 text-gray-300">
+          <li>Event Monitoring – failed logins, port scans, suspicious logins</li>
+          <li>Risk Categorization – Critical, High & Low events with unique IP tracking</li>
+          <li>Threat Intelligence – AbuseIPDB API integration</li>
+          <li>Anomaly Detection – ML pattern flagging (Scikit-learn)</li>
+          <li>Phishing Detector – NLP email classification (Hugging Face)</li>
+        </ul>
+        <p class="mt-3 text-sm text-pink-200">Tech Stack: Python · Streamlit · Plotly · Pandas · Scikit-learn · Hugging Face · Docker · GitHub Actions</p>
+        <div class="flex flex-wrap gap-4 mt-5">
+          <a href="https://lnkd.in/de6CtrFF" class="btn" target="_blank">📂 GitHub Repository</a>
+          <a href="https://lnkd.in/dcZqHKbN" class="btn" target="_blank">🌐 Live App</a>
+        </div>
+      </div>
+
+      <!-- Energy Consumption Prediction Dashboard -->
+      <div class="card p-6" data-aos="fade-up" data-aos-delay="150">
+        <h3 class="text-2xl font-semibold text-purple-200">Energy Consumption Prediction Dashboard – ECS Energy</h3>
+        <p class="text-sm text-gray-300 mb-2">Mar 2025 – May 2025 | R + Shiny</p>
+        <p>Forecasting energy use across 5 000 + buildings using linear regression on .parquet datasets via Arrow; visual insights through dynamic Shiny dashboards and ggplot2 charts.</p>
+        <p class="mt-3 text-sm text-pink-200">Skills: R · Data Analysis · Dashboard Building</p>
+      </div>
+
+      <!-- Helping Hands -->
+      <div class="card p-6" data-aos="fade-up" data-aos-delay="250">
+        <h3 class="text-2xl font-semibold text-purple-200">Helping Hands – NGO Web Application</h3>
+        <p class="text-sm text-gray-300 mb-2">Jan 2024 – May 2024 | Full Stack Web Dev</p>
+        <p>A community platform connecting volunteers and NGOs with posts, comments & certifications, streamlining collaboration for social impact.</p>
+        <p class="mt-3 text-sm text-pink-200">Skills: HTML5 · CSS3 · MySQL · PHP</p>
+      </div>
+
+      <!-- LiteHealth Predictor -->
+      <div class="card p-6" data-aos="fade-up" data-aos-delay="300">
+        <h3 class="text-2xl font-semibold text-purple-200">LiteHealth Predictor – Compact Disease Prediction</h3>
+        <p class="text-sm text-gray-300 mb-2">Jul 2023 – Dec 2023 | Python + ML</p>
+        <p>Machine-learning system using decision-tree algorithms to predict diseases from symptom input; implemented in Anaconda for interactive analysis.</p>
+        <p class="mt-3 text-sm text-pink-200">Skills: Random Forest · Decision Trees · Pandas</p>
+      </div>
+
+      <!-- WorkforceHub -->
+      <div class="card p-6" data-aos="fade-up" data-aos-delay="350">
+        <h3 class="text-2xl font-semibold text-purple-200">WorkforceHub – Employee Data Management System</h3>
+        <p class="text-sm text-gray-300 mb-2">Sep 2023 – Nov 2023 | MySQL + Java</p>
+        <p>Comprehensive desktop web tool for HR data management — onboarding, compliance, performance tracking, and reporting.</p>
+        <p class="mt-3 text-sm text-pink-200">Skills: Java · MySQL · Databases</p>
+      </div>
+
+      <!-- E-Learning Python Portal -->
+      <div class="card p-6" data-aos="fade-up" data-aos-delay="400">
+        <h3 class="text-2xl font-semibold text-purple-200">E-Learning Python Portal</h3>
+        <p class="text-sm text-gray-300 mb-2">Jan 2022 – May 2022 | Django + MySQL</p>
+        <p>Interactive e-learning portal built to teach Python to students with structured lessons, quizzes, and hands-on practice modules.</p>
+        <p class="mt-3 text-sm text-pink-200">Skills: Python · Django · HTML5 · CSS3 · MySQL</p>
+      </div>
+
+      <!-- Pharma Manager -->
+      <div class="card p-6" data-aos="fade-up" data-aos-delay="450">
+        <h3 class="text-2xl font-semibold text-purple-200">Pharma Manager – Pharmacy Management System</h3>
+        <p class="text-sm text-gray-300 mb-2">Jul 2021 – Dec 2021 | Java + NetBeans</p>
+        <p>Java-based system for pharmacy inventory and prescription tracking with MySQL backend and HTML/CSS frontend UI.</p>
+        <p class="mt-3 text-sm text-pink-200">Skills: Java · NetBeans · Database Design</p>
+      </div>
+
     </div>
 
-    <!-- Helping Hands -->
-    <div class="card p-6">
-      <h2 class="text-2xl font-semibold mb-2">Helping Hands: NGO Web Application</h2>
-      <p class="text-sm text-gray-300 mb-3">Jan 2024 – May 2024</p>
-      <p>
-        Designed a community web app connecting volunteers with NGOs through posts, comments, and certifications.  
-        Promotes collaboration and communication within the non-profit sector on a unified, user-friendly platform.
-      </p>
-      <p class="mt-3 text-sm text-pink-200">Skills: Web Development · HTML5 · CSS · MySQL · Research Skills</p>
+    <div class="text-center mt-12">
+      <a href="certifications.html" class="btn">Next → Certifications</a>
     </div>
+  </section>
 
-    <!-- LiteHealth Predictor -->
-    <div class="card p-6">
-      <h2 class="text-2xl font-semibold mb-2">LiteHealth Predictor – Compact Disease Prediction</h2>
-      <p class="text-sm text-gray-300 mb-3">Jul 2023 – Dec 2023</p>
-      <p>
-        Built a machine-learning system using decision-tree algorithms in Python (Anaconda) to predict diseases from user-provided symptoms, delivering fast, accurate diagnostic insights.
-      </p>
-      <p class="mt-3 text-sm text-pink-200">Skills: Predictive Analytics · Random Forest · Decision Trees · Pandas · Anaconda</p>
-    </div>
+  
 
-    <!-- WorkforceHub -->
-    <div class="card p-6">
-      <h2 class="text-2xl font-semibold mb-2">WorkforceHub – Employee Data Management System</h2>
-      <p class="text-sm text-gray-300 mb-3">Sep 2023 – Nov 2023</p>
-      <p>
-        Developed a desktop web application to streamline HR operations, from onboarding to compliance.  
-        Features include employee record management, leave tracking, and performance reporting for improved organizational efficiency.
-      </p>
-      <p class="mt-3 text-sm text-pink-200">Skills: MySQL · Database Management · HR Systems · Project Management</p>
-    </div>
-
-    <!-- E-Learning Python Portal -->
-    <div class="card p-6">
-      <h2 class="text-2xl font-semibold mb-2">E-Learning Python Portal</h2>
-      <p class="text-sm text-gray-300 mb-3">Jan 2022 – May 2022</p>
-      <p>
-        Created an interactive platform to teach Python programming to children during the pandemic using Django + MySQL.  
-        Offered structured lessons, quizzes, and hands-on coding exercises to make remote learning fun and engaging.
-      </p>
-      <p class="mt-3 text-sm text-pink-200">Skills: Python · Django · HTML5 · CSS · MySQL</p>
-    </div>
-
-    <!-- Pharma Manager -->
-    <div class="card p-6">
-      <h2 class="text-2xl font-semibold mb-2">Pharma Manager – Pharmacy Management System</h2>
-      <p class="text-sm text-gray-300 mb-3">Jul 2021 – Dec 2021</p>
-      <p>
-        Engineered a Java-based system to manage inventory, prescriptions, and patient records using NetBeans IDE and MySQL backend.  
-        Improved efficiency in pharmacy operations through digital record-keeping and tracking.
-      </p>
-      <p class="mt-3 text-sm text-pink-200">Skills: Java · NetBeans · HTML · CSS · Databases</p>
-    </div>
-
-  </main>
-
-  <footer class="text-center text-gray-300 text-sm mt-12">
-    © 2025 Selvina Swarna · <a href="mailto:smswarna@syr.edu" class="underline hover:text-pink-300">Contact</a>
-  </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({duration:1000,once:true});</script>
 </body>
 </html>
+
