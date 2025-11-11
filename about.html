@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Selvina Swarna</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      background-color: #0a001a;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(circle at center, rgba(120,0,255,0.25) 0%, transparent 80%),
+                  repeating-linear-gradient(#2e0066 0 2px, transparent 2px 100px),
+                  repeating-linear-gradient(90deg,#2e0066 0 2px, transparent 2px 100px);
+      background-size: 100% 100%, 100px 100px, 100px 100px;
+      z-index: -1;
+      animation: gridmove 20s linear infinite;
+    }
+    @keyframes gridmove {
+      from {background-position: 0 0, 0 0, 0 0;}
+      to {background-position: 0 0, 100px 100px, -100px -100px;}
+    }
+    nav {backdrop-filter: blur(8px); background: rgba(0,0,30,0.5);}
+    .glass {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      backdrop-filter: blur(14px);
+      border-radius: 1rem;
+      box-shadow: 0 0 25px rgba(140,80,255,0.2);
+    }
+    .btn {
+      background: linear-gradient(90deg,#7c3aed,#9333ea);
+      padding: 0.7rem 1.6rem;
+      border-radius: 9999px;
+      color: white;
+      transition: all 0.3s ease;
+    }
+    .btn:hover {transform: scale(1.05); box-shadow: 0 0 25px #8b5cf6;}
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full z-50 py-4 px-8 flex justify-between items-center">
+    <h1 class="text-lg md:text-xl font-semibold text-purple-300 tracking-wide">Selvina Swarna</h1>
+    <div class="space-x-6 text-sm">
+      <a href="index.html" class="hover:text-purple-400">Home</a>
+      <a href="experience.html" class="hover:text-purple-400">Experience</a>
+      <a href="projects.html" class="hover:text-purple-400">Projects</a>
+      <a href="certifications.html" class="hover:text-purple-400">Certifications</a>
+      <a href="skills.html" class="hover:text-purple-400">Skills</a>
+      <a href="contact.html" class="hover:text-purple-400">Contact</a>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <section class="min-h-screen flex items-center justify-center px-6">
+    <div class="glass max-w-4xl p-10 mt-20" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold text-purple-300 mb-6 text-center">About Me</h2>
+      <p class="text-gray-200 leading-relaxed text-justify space-y-4">
+        <span class="block text-lg mb-2 font-semibold text-purple-200">Hi, I’m Selvina Swarna</span>
+        💡 Data Analytics & Cybersecurity Enthusiast | Bridging Tech with Strategy<br/><br/>
+        I’m passionate about turning data into secure, actionable insights that drive smarter decisions and stronger defenses. At Syracuse University, my focus lies at the intersection of data analytics, cybersecurity, and cloud technologies — where numbers meet networks.<br/><br/>
+        At Orion Secure, I work on real-world cybersecurity initiatives — from risk governance and vulnerability assessments to incident response planning. I’ve gained hands-on experience with tools like Kali Linux, CentOS, Metasploitable2, Nmap, and OpenSSL, building skills in ethical hacking, penetration testing, and cryptography.<br/><br/>
+        On the analytics side, I love exploring data stories using Python, R, SQL, Tableau, Power BI, and Excel. My projects range from energy forecasting and AI-powered systems to interactive Shiny dashboards, combining technical precision with creativity.<br/><br/>
+        Certified in Google Data Analytics and Prompt Design in Vertex AI, I’m also expanding into AWS, GCP, Azure, and Snowflake to strengthen my cloud foundation. I’m always curious, always learning — and motivated to build solutions where data intelligence meets digital defense.
+      </p>
+
+      <div class="text-center mt-10">
+        <a href="experience.html" class="btn">Next → Experience</a>
+      </div>
+    </div>
+  </section>
+
+  
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({duration:1000, once:true});</script>
+</body>
+</html>
