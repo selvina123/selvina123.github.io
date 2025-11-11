@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Selvina Swarna</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      background-color: #0a001a;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(circle at center, rgba(120,0,255,0.25) 0%, transparent 80%),
+                  repeating-linear-gradient(#2e0066 0 2px, transparent 2px 100px),
+                  repeating-linear-gradient(90deg,#2e0066 0 2px, transparent 2px 100px);
+      background-size: 100% 100%, 100px 100px, 100px 100px;
+      z-index: -1;
+      animation: gridmove 20s linear infinite;
+    }
+    @keyframes gridmove {
+      from {background-position: 0 0, 0 0, 0 0;}
+      to {background-position: 0 0, 100px 100px, -100px -100px;}
+    }
+    nav {backdrop-filter: blur(8px); background: rgba(0,0,30,0.5);}
+    .glass {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 1rem;
+      backdrop-filter: blur(14px);
+      box-shadow: 0 0 25px rgba(140,80,255,0.2);
+    }
+    input, textarea {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 0.5rem;
+      color: white;
+      padding: 0.8rem;
+      width: 100%;
+    }
+    input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.6); }
+    .btn {
+      background: linear-gradient(90deg,#7c3aed,#9333ea);
+      padding: 0.7rem 1.8rem;
+      border-radius: 9999px;
+      color: white;
+      transition: all 0.3s ease;
+    }
+    .btn:hover {transform: scale(1.05); box-shadow: 0 0 25px #8b5cf6;}
+    .icon-link {transition: 0.3s;}
+    .icon-link:hover {transform: scale(1.2); filter: drop-shadow(0 0 8px #9f7aea);}
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full z-50 py-4 px-8 flex justify-between items-center">
+    <h1 class="text-lg md:text-xl font-semibold text-purple-300 tracking-wide">Selvina Swarna</h1>
+    <div class="space-x-6 text-sm">
+      <a href="index.html" class="hover:text-purple-400">Home</a>
+      <a href="about.html" class="hover:text-purple-400">About</a>
+      <a href="experience.html" class="hover:text-purple-400">Experience</a>
+      <a href="projects.html" class="hover:text-purple-400">Projects</a>
+      <a href="certifications.html" class="hover:text-purple-400">Certifications</a>
+      <a href="skills.html" class="hover:text-purple-400">Skills</a>
+    </div>
+  </nav>
+
+  <!-- Contact Section -->
+  <section class="min-h-screen flex flex-col justify-center items-center px-6 pt-28 pb-20">
+    <h2 class="text-4xl font-bold text-purple-300 mb-6" data-aos="fade-down">Let’s Connect 💬</h2>
+    <p class="text-gray-300 mb-10 text-center max-w-2xl" data-aos="fade-down" data-aos-delay="100">
+      Whether you’d like to collaborate, discuss an opportunity, or just say hi — I’d love to hear from you!
+    </p>
+
+    <form action="https://formspree.io/f/your-form-id" method="POST" class="glass p-8 max-w-xl w-full space-y-4" data-aos="fade-up">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+      <div class="text-center">
+        <button type="submit" class="btn mt-4">📩 Send Message</button>
+      </div>
+    </form>
+
+    <div class="flex gap-6 mt-10" data-aos="fade-up" data-aos-delay="300">
+      <a href="mailto:swarnas.selvina@gmail.com" class="icon-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" width="35">
+      </a>
+      <a href="https://github.com/selvina123" class="icon-link" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" width="35">
+      </a>
+      <a href="https://linkedin.com/in/selvina-swarna" class="icon-link" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="35">
+      </a>
+    </div>
+  </section>
+
+  
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({duration:1000, once:true});</script>
+</body>
+</html>
