@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certifications | Selvina Swarna</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      background-color: #0a001a;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(circle at center, rgba(120,0,255,0.25) 0%, transparent 80%),
+                  repeating-linear-gradient(#2e0066 0 2px, transparent 2px 100px),
+                  repeating-linear-gradient(90deg,#2e0066 0 2px, transparent 2px 100px);
+      background-size: 100% 100%, 100px 100px, 100px 100px;
+      z-index: -1;
+      animation: gridmove 20s linear infinite;
+    }
+    @keyframes gridmove {
+      from {background-position: 0 0, 0 0, 0 0;}
+      to {background-position: 0 0, 100px 100px, -100px -100px;}
+    }
+    nav {backdrop-filter: blur(8px); background: rgba(0,0,30,0.5);}
+    .card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 1rem;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 20px rgba(140,80,255,0.15);
+      transition: all 0.3s ease;
+    }
+    .card:hover {transform: translateY(-5px); box-shadow: 0 0 30px rgba(140,80,255,0.3);}
+    .btn {
+      background: linear-gradient(90deg,#7c3aed,#9333ea);
+      padding: 0.6rem 1.4rem;
+      border-radius: 9999px;
+      color: white;
+      transition: all 0.3s ease;
+    }
+    .btn:hover {transform: scale(1.05); box-shadow: 0 0 25px #8b5cf6;}
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full z-50 py-4 px-8 flex justify-between items-center">
+    <h1 class="text-lg md:text-xl font-semibold text-purple-300 tracking-wide">Selvina Swarna</h1>
+    <div class="space-x-6 text-sm">
+      <a href="index.html" class="hover:text-purple-400">Home</a>
+      <a href="about.html" class="hover:text-purple-400">About</a>
+      <a href="experience.html" class="hover:text-purple-400">Experience</a>
+      <a href="projects.html" class="hover:text-purple-400">Projects</a>
+      <a href="skills.html" class="hover:text-purple-400">Skills</a>
+      <a href="contact.html" class="hover:text-purple-400">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Certifications -->
+  <section class="min-h-screen px-6 pt-32 pb-20">
+    <h2 class="text-4xl font-bold text-purple-300 mb-12 text-center" data-aos="fade-down">Certifications</h2>
+
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+
+      <!-- Google Data Analytics -->
+      <div class="card p-6" data-aos="fade-up">
+        <div class="flex items-center gap-3 mb-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="w-10 h-10">
+          <h3 class="text-xl font-semibold text-purple-200">Google Data Analytics Professional Certificate</h3>
+        </div>
+        <p class="text-sm text-gray-300 mb-2">Issued Jul 2025 · Credential ID M6SYXMZY2C8B</p>
+        <p class="text-gray-200">Gained practical skills in SQL, R, Excel, and Tableau for data cleaning, visualization, and analysis. Completed a real-world capstone analytics project.</p>
+        <p class="mt-3 text-sm text-pink-200">Skills: Data Analysis · Data Visualization</p>
+      </div>
+
+      <!-- IBM Ethical Hacking -->
+      <div class="card p-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex items-center gap-3 mb-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" class="w-10 h-10">
+          <h3 class="text-xl font-semibold text-purple-200">Ethical Hacking with Kali Linux</h3>
+        </div>
+        <p class="text-sm text-gray-300 mb-2">Issued Jul 2025 · Credential ID FUC7OADG6YGU</p>
+        <p class="text-gray-200">Hands-on experience with Kali Linux tools for reconnaissance, scanning, and exploitation in controlled lab environments.</p>
+      </div>
+
+      <!-- IBM Metasploit -->
+      <div class="card p-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex items-center gap-3 mb-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" class="w-10 h-10">
+          <h3 class="text-xl font-semibold text-purple-200">Exploitation and Penetration Testing with Metasploit</h3>
+        </div>
+        <p class="text-sm text-gray-300 mb-2">Issued Jul 2025 · Credential ID EA1R67AK9WLO</p>
+        <p class="text-gray-200">Applied exploitation and post-exploitation techniques using Metasploit; authored structured risk-analysis reports.</p>
+      </div>
+
+      <!-- Google Vertex AI Prompt Design -->
+      <div class="card p-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="flex items-center gap-3 mb-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="w-10 h-10">
+          <h3 class="text-xl font-semibold text-purple-200">Prompt Design in Vertex AI Skill Badge</h3>
+        </div>
+        <p class="text-sm text-gray-300 mb-2">Issued Jul 2025</p>
+        <p class="text-gray-200">Learned to engineer effective prompts and workflows within Google Cloud Vertex AI for LLM-based solutions.</p>
+      </div>
+
+      <!-- Google Sheets -->
+      <div class="card p-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="flex items-center gap-3 mb-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="w-10 h-10">
+          <h3 class="text-xl font-semibold text-purple-200">Doing More with Google Sheets</h3>
+        </div>
+        <p class="text-sm text-gray-300 mb-2">Issued Jul 2025 · Credential ID H2SYAF39VIDC</p>
+        <p class="text-gray-200">Advanced data manipulation and visualization in Google Sheets for automated reporting and KPI dashboards.</p>
+        <p class="mt-3 text-sm text-pink-200">Skills: Data Visualization · Automation</p>
+      </div>
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="skills.html" class="btn">Next → Skills & Soft Skills</a>
+    </div>
+  </section>
+
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({duration:1000,once:true});</script>
+</body>
+</html>
