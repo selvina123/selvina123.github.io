@@ -5,90 +5,117 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Experience | Selvina Swarna</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
   <style>
     body {
-      background: linear-gradient(135deg, #c81d77, #6a00f4);
-      color: #fff;
+      margin: 0;
       font-family: 'Poppins', sans-serif;
+      color: white;
+      background-color: #0a001a;
+      overflow-x: hidden;
     }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(circle at center, rgba(120,0,255,0.25) 0%, transparent 80%),
+                  repeating-linear-gradient(#2e0066 0 2px, transparent 2px 100px),
+                  repeating-linear-gradient(90deg,#2e0066 0 2px, transparent 2px 100px);
+      background-size: 100% 100%, 100px 100px, 100px 100px;
+      z-index: -1;
+      animation: gridmove 20s linear infinite;
+    }
+    @keyframes gridmove {
+      from {background-position: 0 0, 0 0, 0 0;}
+      to {background-position: 0 0, 100px 100px, -100px -100px;}
+    }
+    nav {backdrop-filter: blur(8px); background: rgba(0,0,30,0.5);}
     .card {
-      backdrop-filter: blur(15px);
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
       border-radius: 1rem;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 20px rgba(140,80,255,0.15);
+      transition: all 0.3s ease;
     }
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    .card:hover {transform: translateY(-5px); box-shadow: 0 0 30px rgba(140,80,255,0.3);}
+    .btn {
+      background: linear-gradient(90deg,#7c3aed,#9333ea);
+      padding: 0.7rem 1.6rem;
+      border-radius: 9999px;
+      color: white;
+      transition: all 0.3s ease;
     }
+    .btn:hover {transform: scale(1.05); box-shadow: 0 0 25px #8b5cf6;}
   </style>
 </head>
-<body class="min-h-screen px-6 py-10">
-  <h1 class="text-4xl font-bold text-center mb-12 tracking-wide">Professional Experience</h1>
 
-  <div class="max-w-5xl mx-auto space-y-10">
+<body>
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full z-50 py-4 px-8 flex justify-between items-center">
+    <h1 class="text-lg md:text-xl font-semibold text-purple-300 tracking-wide">Selvina Swarna</h1>
+    <div class="space-x-6 text-sm">
+      <a href="index.html" class="hover:text-purple-400">Home</a>
+      <a href="about.html" class="hover:text-purple-400">About</a>
+      <a href="projects.html" class="hover:text-purple-400">Projects</a>
+      <a href="certifications.html" class="hover:text-purple-400">Certifications</a>
+      <a href="skills.html" class="hover:text-purple-400">Skills</a>
+      <a href="contact.html" class="hover:text-purple-400">Contact</a>
+    </div>
+  </nav>
 
-    <!-- Orion Secure -->
-    <div class="card p-6">
-      <div class="flex items-center mb-4">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Shield_icon.svg" alt="Orion Secure" class="w-12 h-12 mr-4">
-        <div>
-          <h2 class="text-2xl font-semibold">Cybersecurity & Information Governance Intern</h2>
-          <p class="text-sm text-gray-200">Orion Secure (formerly Cyber Defense Institute) · Aug 2025 – Present · Syracuse, NY</p>
-        </div>
+  <!-- Experience Section -->
+  <section class="min-h-screen px-6 pt-32 pb-20">
+    <h2 class="text-4xl font-bold text-purple-300 mb-10 text-center" data-aos="fade-down">Professional Experience</h2>
+
+    <div class="max-w-5xl mx-auto space-y-10">
+
+      <!-- Orion Secure -->
+      <div class="card p-6" data-aos="fade-up">
+        <h3 class="text-2xl font-semibold text-purple-200">Cybersecurity & Information Governance Intern</h3>
+        <p class="text-sm text-gray-300 mb-2">Orion Secure (formerly Cyber Defense Institute) · Aug 2025 – Present · Syracuse, NY</p>
+        <ul class="list-disc ml-6 text-gray-200 leading-relaxed space-y-1">
+          <li>Performed penetration testing and vulnerability assessments using Kaseya & Qualys, reducing exploitable risks by 30%.</li>
+          <li>Maintained risk registers and audit documentation to strengthen NIST/ISO 27001 compliance and readiness.</li>
+          <li>Managed incident-response playbooks, Active Directory audits, and ServiceNow workflows for governance oversight.</li>
+          <li>Supported client security programs through policy reviews and reporting to executive stakeholders.</li>
+        </ul>
       </div>
-      <p class="leading-relaxed">
-        Part of a consultancy team supporting client security initiatives by conducting penetration tests, risk assessments, and compliance documentation.  
-        Assisted in developing and implementing information governance policies while contributing to core cybersecurity operations — monitoring incidents, validating security controls, and preparing for audits to ensure compliance and resilience.
-      </p>
-      <ul class="list-disc ml-6 mt-3 text-sm">
-        <li>Specialization: Vulnerability Assessment & Penetration Testing</li>
-      </ul>
+
+      <!-- Teaching Assistant -->
+      <div class="card p-6" data-aos="fade-up" data-aos-delay="150">
+        <h3 class="text-2xl font-semibold text-purple-200">Teaching Assistant – Cybersecurity</h3>
+        <p class="text-sm text-gray-300 mb-2">Syracuse University School of Information Studies · Jun 2025 – Aug 2025 · Syracuse, NY</p>
+        <ul class="list-disc ml-6 text-gray-200 leading-relaxed space-y-1">
+          <li>Delivered core cybersecurity instruction covering AES/RSA encryption, VPNs, and HTTPS protocols.</li>
+          <li>Led ethical hacking labs with Kali Linux and Nmap, boosting student performance by 40% in CTF events.</li>
+          <li>Created interactive hackathon scenarios simulating real-world attacks and defenses for Red/Blue teams.</li>
+        </ul>
+      </div>
+
+      <!-- QuoDeck -->
+      <div class="card p-6" data-aos="fade-up" data-aos-delay="300">
+        <h3 class="text-2xl font-semibold text-purple-200">Content Data Analyst Intern</h3>
+        <p class="text-sm text-gray-300 mb-2">QuoDeck Technologies Pvt Ltd · Nov 2023 – Jan 2024 · Sāki Nāka, Maharashtra ( Hybrid )</p>
+        <ul class="list-disc ml-6 text-gray-200 leading-relaxed space-y-1">
+          <li>Analyzed 250 K + rows of multi-source data (sales, engagement, marketing) to derive actionable insights.</li>
+          <li>Cleaned and transformed datasets with Excel (VLOOKUP, PivotTables) improving data consistency by 30 %.</li>
+          <li>Built interactive dashboards in Power BI & Tableau for revenue, retention, and campaign effectiveness metrics.</li>
+        </ul>
+      </div>
+
     </div>
 
-    <!-- Syracuse TA -->
-    <div class="card p-6">
-      <div class="flex items-center mb-4">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Syracuse_University_logo.svg" alt="Syracuse University" class="w-12 h-12 mr-4">
-        <div>
-          <h2 class="text-2xl font-semibold">Teaching Assistant – Cybersecurity</h2>
-          <p class="text-sm text-gray-200">Syracuse University School of Information Studies · Jun 2025 – Aug 2025 · Syracuse, NY</p>
-        </div>
-      </div>
-      <p class="leading-relaxed">
-        Assisted in a cybersecurity program introducing high-school students to ethical hacking, red vs blue team simulations, and hands-on labs.  
-        Supported daily exercises involving real-world defense scenarios, guided teams through final hackathon projects, and fostered an engaging environment for students new to cybersecurity.
-      </p>
-      <ul class="list-disc ml-6 mt-3 text-sm">
-        <li>Skills: Cybersecurity · Ethical Hacking · Mentorship · Communication</li>
-      </ul>
+    <div class="text-center mt-12">
+      <a href="projects.html" class="btn">Next → Projects</a>
     </div>
+  </section>
 
-    <!-- QuoDeck -->
-    <div class="card p-6">
-      <div class="flex items-center mb-4">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Data_icon.svg" alt="QuoDeck Technologies" class="w-12 h-12 mr-4">
-        <div>
-          <h2 class="text-2xl font-semibold">Content Data Analyst Intern</h2>
-          <p class="text-sm text-gray-200">QuoDeck Technologies Pvt. Ltd · Nov 2023 – Jan 2024 · Sāki Nāka, Maharashtra ( Hybrid )</p>
-        </div>
-      </div>
-      <p class="leading-relaxed">
-        Analyzed 250K+ rows of cross-functional data including sales figures, learner activity, and marketing metrics to support strategic decisions.  
-        Cleaned and structured raw data in Excel using advanced functions to improve consistency by 30%.  
-        Built interactive dashboards in Power BI and Tableau to visualize revenue trends, retention, and campaign performance.
-      </p>
-      <ul class="list-disc ml-6 mt-3 text-sm">
-        <li>Tools: Excel (VLOOKUP, PivotTables) · Power BI · Tableau · SQL</li>
-        <li>Soft Skills: Communication · Collaboration · Presentation</li>
-      </ul>
-    </div>
+  
 
-  </div>
-
-  <footer class="text-center text-sm text-gray-300 mt-12">
-    © 2025 Selvina Swarna · <a href="mailto:smswarna@syr.edu" class="underline hover:text-pink-300">Contact</a>
-  </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({duration:1000, once:true});</script>
 </body>
 </html>
+
